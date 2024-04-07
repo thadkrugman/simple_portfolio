@@ -98,12 +98,24 @@ const socialItems = [
   const nav = document.querySelector(".nav");
   const socials = document.querySelector(".socials");
 
-  observer.observe(rotateLeftBox);
-  observer.observe(rotateRightBox);
-  observer.observe(heading);
-  observer.observe(paragraph);
-  observer.observe(nav);
-  observer.observe(socials);
+  if (rotateLeftBox) {
+    observer.observe(rotateLeftBox);
+  }
+  if (rotateRightBox) {
+    observer.observe(rotateRightBox);
+  }
+  if (heading) {
+    observer.observe(heading);
+  }
+  if (paragraph) {
+    observer.observe(paragraph);
+  }
+  if (nav) {
+    observer.observe(nav);
+  }
+  if (socials) {
+    observer.observe(socials);
+  }
 </script>
 
 <style>
