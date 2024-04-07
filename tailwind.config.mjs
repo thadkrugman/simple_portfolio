@@ -5,7 +5,16 @@ export default {
     extend: {},
   },
   daisyui: {
-    themes: ["dracula"],
+    themes: [
+      {
+        dracula: {
+          ...require("daisyui/src/theming/themes")["dracula"],
+          "base-100": "#303446",
+          "base-content": "#b5bfe2",
+          neutral: "#626880",
+        },
+      },
+    ],
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };
