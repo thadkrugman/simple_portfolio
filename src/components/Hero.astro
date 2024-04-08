@@ -1,7 +1,7 @@
 ---
 const navItems = [
   { name: "About", href: "/about" },
-  { name: "portfolio", href: "/portfolio" },
+  { name: "Portfolio", href: "/portfolio" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
@@ -40,7 +40,9 @@ const socialItems = [
     <div
       class="box rotate-left box-shadow inset-0 flex flex-col w-full px-6 sm:px-8 md:px-16 lg:px-32 py-32 max-w-5xl bg-base-100"
     >
-      <h1 class="heading text-4xl font-bold text-secondary">THAD KRUGMAN</h1>
+      <h1 class="heading text-4xl font-bold text-secondary animate-bounce">
+        THAD KRUGMAN
+      </h1>
       <p class="paragraph pt-6 text-base-content sm:text-lg">
         As a full stack software engineer, I bring three years of expertise in
         crafting exceptional web and mobile applications. With a deep love for
@@ -71,7 +73,7 @@ const socialItems = [
         {
           socialItems.map((item) => (
             <a
-              class="text-secondary bg-base-100 h-10 w-10 hover:opacity-80"
+              class="text-secondary bg-base-100 h-7 w-7 hover:opacity-80"
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
