@@ -1,4 +1,6 @@
 ---
+import "@fontsource-variable/eb-garamond";
+
 interface Props {
   title: string;
 }
@@ -20,4 +22,8 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-<style is:global></style>
+<style is:global>
+  .eb-garamond {
+    font-family: "EB Garamond Variable", serif;
+  }
+</style>

@@ -9,9 +9,10 @@ export default {
       {
         dracula: {
           ...require("daisyui/src/theming/themes")["dracula"],
-          "base-100": "#303446",
-          "base-content": "#b5bfe2",
-          neutral: "#626880",
+          "base-100": "#F4F2EA",
+          "base-content": "#3e3e3e",
+          primary: "#3e3e3e",
+          "primary-content": "#F4F2EA",
         },
       },
     ],
