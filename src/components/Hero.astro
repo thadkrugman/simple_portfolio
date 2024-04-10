@@ -38,12 +38,12 @@ const socialItems = [
     class="box rotate-right flex flex-col w-full max-w-5xl bg-base-100 xl:bg-primary"
   >
     <div
-      class="box rotate-left box-shadow inset-0 flex flex-col w-full px-6 sm:px-8 md:px-16 lg:px-32 py-20 sm:py-32 max-w-5xl bg-base-100"
+      class="box rotate-left box-shadow inset-0 flex flex-col w-full px-6 sm:px-8 md:px-16 lg:px-32 py-24 sm:py-32 max-w-5xl bg-base-100"
     >
       <h1 class="heading eb-garamond text-5xl font-semibold text-base-content">
         Thad Krugman
       </h1>
-      <p class="paragraph eb-garamond pt-5 text-base-content text-xl">
+      <p class="paragraph eb-garamond pt-5 text-base-content text-xl leading-8">
         As a full stack software engineer, I bring three years of expertise in
         crafting exceptional web and mobile applications. With a deep love for
         technology and programming, I find great satisfaction in exploring and
@@ -58,14 +58,11 @@ const socialItems = [
         and create something truly remarkable together.
       </p>
       <nav
-        class="nav no-scrollbar mt-5 flex flex-row space-x-3 overflow-scroll"
+        class="nav no-scrollbar mt-5 grid grid-flow-row grid-cols-4 gap-3 sm:flex sm:flex-row sm:space-x-3 sm:gap-0"
       >
         {
           navItems.map((item) => (
-            <a
-              href={item.href}
-              class="bg-primary py-3 px-5 text-[9px] sm:text-[11px] font-semibold text-primary-content rounded-sm"
-            >
+            <a href={item.href} class="btn btn-primary">
               {item.name}
             </a>
           ))
