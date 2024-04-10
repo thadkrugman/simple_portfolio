@@ -90,15 +90,17 @@ const navItems = [
 </header>
 
 <script>
-  const drawer = document.getElementById("drawer");
-  const openDrawerBtn = document.getElementById("openDrawerBtn");
-  const closeDrawerBtn = document.getElementById("closeDrawerBtn");
+  const drawer = document.getElementById("drawer") as HTMLElement;
+  const openDrawerBtn = document.getElementById("openDrawerBtn") as HTMLElement;
+  const closeDrawerBtn = document.getElementById(
+    "closeDrawerBtn",
+  ) as HTMLElement;
 
-  openDrawerBtn.addEventListener("click", () => {
-    drawer.classList.remove("translate-x-full");
+  openDrawerBtn?.addEventListener("click", () => {
+    drawer?.classList.remove("translate-x-full");
   });
 
-  closeDrawerBtn.addEventListener("click", () => {
-    drawer.classList.add("translate-x-full");
+  closeDrawerBtn?.addEventListener("click", () => {
+    drawer?.classList.add("translate-x-full");
   });
 </script>
