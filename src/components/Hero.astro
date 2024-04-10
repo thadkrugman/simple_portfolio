@@ -90,14 +90,26 @@ const socialItems = [
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const fadeInElements = document.querySelectorAll(".fade-in, .box");
-    fadeInElements.forEach((element) => {
-      if (element instanceof HTMLElement) {
-        element.classList.add("show");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
       }
     });
   });
+  const fadeIn = document.querySelector(".fade-in");
+  const rotateLeft = document.querySelector(".rotate-left");
+  const rotateRight = document.querySelector(".rotate-right");
+
+  if (fadeIn) {
+    observer.observe(fadeIn);
+  }
+  if (rotateLeft) {
+    observer.observe(rotateLeft);
+  }
+  if (rotateRight) {
+    observer.observe(rotateRight);
+  }
 </script>
 
 <style>
