@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Thad Krugman | Full Stack Software Enginner & Tech Enthusiast">
-  <main class="py-24 sm:py-32 eb-garamond text-base-content">
+  <main class="fade-in py-24 sm:py-32 eb-garamond text-base-content">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl lg:mx-0">
         <h1 class="text-5xl font-semibold sm:text-8xl">About</h1>
@@ -99,4 +99,24 @@ import Layout from "../layouts/Layout.astro";
   </main>
 </Layout>
 
-<style></style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeInElements = document.querySelectorAll(".fade-in");
+    fadeInElements.forEach((element) => {
+      if (element instanceof HTMLElement) {
+        element.classList.add("show");
+      }
+    });
+  });
+</script>
+
+<style>
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1.5s;
+  }
+
+  .fade-in.show {
+    opacity: 1;
+  }
+</style>
