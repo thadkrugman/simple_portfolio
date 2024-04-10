@@ -97,19 +97,22 @@ const socialItems = [
       }
     });
   });
-  const fadeIn = document.querySelector(".fade-in");
-  const rotateLeft = document.querySelector(".rotate-left");
-  const rotateRight = document.querySelector(".rotate-right");
 
-  if (fadeIn) {
-    observer.observe(fadeIn);
-  }
-  if (rotateLeft) {
-    observer.observe(rotateLeft);
-  }
-  if (rotateRight) {
-    observer.observe(rotateRight);
-  }
+  const fadeInElements = document.querySelectorAll(".fade-in");
+  const rotateLeftElements = document.querySelectorAll(".rotate-left");
+  const rotateRightElements = document.querySelectorAll(".rotate-right");
+
+  fadeInElements.forEach((element) => {
+    observer.observe(element);
+  });
+
+  rotateLeftElements.forEach((element) => {
+    observer.observe(element);
+  });
+
+  rotateRightElements.forEach((element) => {
+    observer.observe(element);
+  });
 </script>
 
 <style>
