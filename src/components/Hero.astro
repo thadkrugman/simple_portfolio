@@ -1,11 +1,4 @@
 ---
-const navItems = [
-  { name: "ABOUT", href: "/about" },
-  { name: "PORTFOLIO", href: "/portfolio" },
-  { name: "BLOG", href: "/blog" },
-  { name: "CONTACT", href: "/contact" },
-];
-
 const socialItems = [
   {
     icon: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -32,128 +25,43 @@ const socialItems = [
 ---
 
 <div
-  class="min-h-screen flex flex-col w-full items-center justify-center mx-auto"
+  class="min-h-[calc(100vh-84px)] flex flex-col w-full items-center justify-center mx-auto px-6 lg:px-8 py-24 sm:py-32 max-w-6xl"
 >
-  <div
-    class="box rotate-right flex flex-col w-full max-w-5xl bg-base-100 xl:bg-primary"
-  >
-    <div
-      class="box rotate-left box-shadow inset-0 flex flex-col w-full px-6 sm:px-8 md:px-16 lg:px-32 py-24 sm:py-32 max-w-5xl bg-base-100"
+  <div class="fade-in">
+    <h1
+      class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold text-base-content"
     >
-      <div class="fade-in">
-        <h1
-          class="eb-garamond text-5xl sm:text-6xl font-semibold text-base-content"
-        >
-          Thad Krugman
-        </h1>
-        <p class="eb-garamond pt-5 text-base-content text-xl leading-8">
-          As a full stack software engineer, I bring three years of expertise in
-          crafting exceptional web and mobile applications. With a deep love for
-          technology and programming, I find great satisfaction in exploring and
-          leveraging the latest cutting-edge tools and frameworks in the
-          TypeScript ecosystem. From React and React Native to emerging
-          solutions like Astro, Solid, Svelte, and Bun, I embrace innovation to
-          deliver powerful, efficient, and user-friendly experiences. Driven by
-          curiosity, I'm also expanding my knowledge into the realm of low-level
-          programming languages, such as Zig and Rust, to gain a comprehensive
-          understanding of system-level development. If you're looking for a
-          passionate collaborator who stays at the forefront of technology,
-          let's join forces and create something truly remarkable together.
-        </p>
-        <nav
-          class="mt-5 grid grid-flow-row grid-cols-4 gap-3 sm:flex sm:flex-row sm:space-x-3 sm:gap-0"
-        >
-          {
-            navItems.map((item) => (
-              <a href={item.href} class="btn btn-primary">
-                {item.name}
-              </a>
-            ))
-          }
-        </nav>
-        <div class="mt-5 flex flex-row space-x-3">
-          {
-            socialItems.map((item) => (
-              <a
-                class="text-primary bg-base-100 h-7 w-7 hover:opacity-80"
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                area-label={item.description}
-              >
-                <Fragment set:html={item.icon} />
-              </a>
-            ))
-          }
-        </div>
-      </div>
+      Thad Krugman
+    </h1>
+    <p class="pt-6 text-base-content text-xl leading-8 max-w-4xl">
+      As a full stack software engineer, I bring three years of expertise in
+      crafting exceptional web and mobile applications. With a deep love for
+      technology and programming, I find great satisfaction in exploring and
+      leveraging the latest cutting-edge tools and frameworks in the TypeScript
+      ecosystem. From React and React Native to emerging solutions like Astro,
+      Solid, Svelte, and Bun, I embrace innovation to deliver powerful,
+      efficient, and user-friendly experiences. Driven by curiosity, I'm also
+      expanding my knowledge into the realm of low-level programming languages,
+      such as Zig and Rust, to gain a comprehensive understanding of
+      system-level development. If you're looking for a passionate collaborator
+      who stays at the forefront of technology, let's join forces and create
+      something truly remarkable together.
+    </p>
+    <div class="mt-5 flex flex-row space-x-6">
+      {
+        socialItems.map((item) => (
+          <a
+            class="text-primary bg-base-100 h-8 w-8 hover:opacity-80"
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            area-label={item.description}
+          >
+            <Fragment set:html={item.icon} />
+          </a>
+        ))
+      }
     </div>
   </div>
 </div>
-
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
-
-  const fadeInElements = document.querySelectorAll(".fade-in");
-  const rotateLeftElements = document.querySelectorAll(".rotate-left");
-  const rotateRightElements = document.querySelectorAll(".rotate-right");
-
-  fadeInElements.forEach((element) => {
-    observer.observe(element);
-  });
-
-  rotateLeftElements.forEach((element) => {
-    observer.observe(element);
-  });
-
-  rotateRightElements.forEach((element) => {
-    observer.observe(element);
-  });
-</script>
-
-<style>
-  @media (max-width: 1279px) {
-    .fade-in {
-      opacity: 0;
-      transition: opacity 1.5s;
-    }
-
-    .fade-in.show {
-      opacity: 1;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .box {
-      transition: transform 1s;
-    }
-
-    .box.box-shadow {
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    }
-
-    .box.rotate-left.show {
-      animation: rotateLeft 1s forwards;
-      animation-delay: 1s;
-    }
-
-    @keyframes rotateLeft {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(-12deg);
-      }
-    }
-
-    .box.rotate-right.show {
-      @apply rotate-6;
-    }
-  }
-</style>
+<style></style>

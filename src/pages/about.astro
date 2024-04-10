@@ -3,9 +3,9 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Thad Krugman | Full Stack Software Enginner & Tech Enthusiast">
-  <main class="py-24 sm:py-32 eb-garamond text-base-content">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="fade-in mx-auto max-w-2xl lg:mx-0">
+  <main class="py-24 sm:py-32 text-base-content">
+    <div class="mx-auto max-w-6xl px-6 lg:px-8">
+      <div class="fade-in mx-auto max-w-3xl lg:mx-0">
         <h1 class="text-5xl font-semibold sm:text-8xl">About</h1>
         <p class="mt-6 text-xl leading-8">
           As a passionate and dedicated software engineer, I have spent the last
@@ -15,7 +15,7 @@ import Layout from "../layouts/Layout.astro";
           solutions that make a positive impact on people's lives.
         </p>
 
-        <h2 class="text-3xl sm:text-4xl mt-12 font-semibold">
+        <h2 class="text-3xl sm:text-4xl mt-10 font-semibold">
           Education and Achievements
         </h2>
         <p class="mt-3 text-xl leading-8">
@@ -28,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
           technology and my drive to excel.
         </p>
 
-        <h2 class="text-3xl sm:text-4xl mt-12 font-semibold">
+        <h2 class="text-3xl sm:text-4xl mt-10 font-semibold">
           Professional Expertise
         </h2>
         <p class="mt-3 text-xl leading-8">
@@ -40,7 +40,7 @@ import Layout from "../layouts/Layout.astro";
           experiences.
         </p>
 
-        <h2 class="text-3xl sm:text-4xl mt-12 font-semibold">
+        <h2 class="text-3xl sm:text-4xl mt-10 font-semibold">
           Continuous Learning and Growth
         </h2>
         <p class="mt-3 text-xl leading-8">
@@ -52,7 +52,7 @@ import Layout from "../layouts/Layout.astro";
           at the forefront of the ever-changing tech landscape.
         </p>
 
-        <h2 class="text-3xl sm:text-4xl mt-12 font-semibold">
+        <h2 class="text-3xl sm:text-4xl mt-10 font-semibold">
           Personal Life and Values
         </h2>
         <p class="mt-3 text-xl leading-8">
@@ -63,7 +63,7 @@ import Layout from "../layouts/Layout.astro";
           essential for overall well-being and happiness.
         </p>
 
-        <h2 class="text-3xl sm:text-4xl mt-12 font-semibold">
+        <h2 class="text-3xl sm:text-4xl mt-10 font-semibold">
           Personal Interests
         </h2>
         <p class="mt-3 text-xl leading-8">
@@ -80,7 +80,7 @@ import Layout from "../layouts/Layout.astro";
           and films.
         </p>
 
-        <h2 class="text-3xl sm:text-4xl mt-12 font-semibold">
+        <h2 class="text-3xl sm:text-4xl mt-10 font-semibold">
           Let's Collaborate!
         </h2>
         <p class="mt-3 text-xl leading-8">
@@ -90,7 +90,7 @@ import Layout from "../layouts/Layout.astro";
           something truly remarkable and push the boundaries of what's possible
           in the digital world.
         </p>
-        <p class="mt-6 text-xl leading-8">
+        <p class="mt-5 text-xl leading-8">
           Feel free to explore my portfolio, blog, and contact pages to learn
           more about my work and how we can collaborate on your next project.
         </p>
@@ -99,28 +99,4 @@ import Layout from "../layouts/Layout.astro";
   </main>
 </Layout>
 
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
-  const fadeIn = document.querySelector(".fade-in");
-
-  if (fadeIn) {
-    observer.observe(fadeIn);
-  }
-</script>
-
-<style>
-  .fade-in {
-    opacity: 0;
-    transition: opacity 1.5s;
-  }
-
-  .fade-in.show {
-    opacity: 1;
-  }
-</style>
+<style></style>
